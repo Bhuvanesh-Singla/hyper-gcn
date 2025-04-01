@@ -8,6 +8,14 @@ import infer_script
 from infer_script import AttentionGCN, CoAtNetRelativeAttention
 import pickle
 # st.set_option('server.runOnSave', False)
+
+import asyncio
+
+try:
+    asyncio.get_running_loop()
+except RuntimeError:
+    asyncio.set_event_loop(asyncio.new_event_loop())
+
 def set_background(image_path):
     """Set a background image for the Streamlit app."""
     page_bg_img = f"""
