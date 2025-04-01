@@ -7,7 +7,7 @@ import torch
 import infer_script 
 from infer_script import AttentionGCN, CoAtNetRelativeAttention
 import pickle
-st.set_option('server.runOnSave', False)
+# st.set_option('server.runOnSave', False)
 def set_background(image_path):
     """Set a background image for the Streamlit app."""
     page_bg_img = f"""
