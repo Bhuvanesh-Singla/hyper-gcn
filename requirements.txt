@@ -1,7 +1,7 @@
-matplotlib==3.10.0
-scipy==1.15.2
+matplotlib==3.7.1      # More stable than 3.10.0
+scipy==1.10.1          # Compatible with PyTorch 2.0.1
 torch==2.0.1
 torchvision==0.15.2
 torchaudio==2.0.2
-einops==0.8.1
-scikit-learn==1.6.1
+einops==0.6.1          # More stable version
+scikit-learn==1.2.2    # More stable than 1.6.1
