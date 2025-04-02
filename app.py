@@ -91,7 +91,7 @@ if st.button("Run/Show Results"):
         all_data = infer_script.PatchSet(X, y, infer_script.PATCH_SIZE,is_pred = True)
         all_loader = infer_script.DataLoader(all_data,infer_script.BATCH_SIZE,shuffle= False)
         
-        model = torch.load(model_path,pickle_module=pickle, map_location = device, weights_only=False)
+        model.load_state_dict(torch.load(model_path, map_location=device))
         
         infer_script.predict_and_save_grid(dataset_name, all_data, model, "prediction_map.png")
         st.write("Model has finished running.")
