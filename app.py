@@ -82,8 +82,8 @@ if st.button("Run/Show Results"):
         attention_dropout = 0.1
         ff_dropout = 0.1    
         
-        torch.serialization.add_safe_globals([AttentionGCN])
-        torch.serialization.add_safe_globals([CoAtNetRelativeAttention])
+        # torch.serialization.add_safe_globals([AttentionGCN])
+        # torch.serialization.add_safe_globals([CoAtNetRelativeAttention])
         
         model = AttentionGCN(pre_height, pre_width, in_dim, proj_dim, head_dim, n_classes, attention_dropout, ff_dropout)
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
