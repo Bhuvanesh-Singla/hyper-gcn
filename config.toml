@@ -1,3 +1,6 @@
 [server]
 runOnSave = false
 fileWatcherType = "none"
+
+[theme]
+showGithubButton = false
