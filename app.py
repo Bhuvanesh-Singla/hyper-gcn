@@ -35,7 +35,12 @@ def get_image_as_base64(image_path):
 
 background_image_path = r"bigmap.jpg"
 set_background(get_image_as_base64(background_image_path))
-
+st.markdown("""
+    <style>
+        footer {visibility: hidden;}
+        header {visibility: hidden;}
+    </style>
+""", unsafe_allow_html=True)
 
 st.title("National Institute of Technology Karnataka, Surathkal")
 st.subheader("Department of Information Technology")
