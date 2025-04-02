@@ -42,11 +42,24 @@ set_background(get_image_as_base64(background_image_path))
 #     </style>
 # """, unsafe_allow_html=True)
 
+# st.markdown("""
+#     <style>
+#         footer {visibility: hidden !important;}
+#         header {visibility: hidden !important;}
+#         [data-testid="stFooter"] {display: none !important;}
+#     </style>
+# """, unsafe_allow_html=True)
+
 st.markdown("""
     <style>
-        footer {visibility: hidden !important;}
-        header {visibility: hidden !important;}
-        [data-testid="stFooter"] {display: none !important;}
+        /* Hide the entire header (removes GitHub button) */
+        header {visibility: hidden !important; display: none !important;}
+
+        /* Hide the entire footer (removes user profile icon) */
+        footer {visibility: hidden !important; display: none !important;}
+
+        /* Hide the App Creator profile section */
+        div[class*="_profileContainer_"] {display: none !important;}
     </style>
 """, unsafe_allow_html=True)
 
